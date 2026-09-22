@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pedidos GA</title>
+<meta name="description" content="Toma de Pedidos - Grupo Andino">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#ee3338">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pedidos GA">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+  html,body{margin:0;height:100%;background:#ee3338;overflow:hidden}
+  .cargando{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+    color:#fff;font:600 15px system-ui,-apple-system,"Segoe UI",sans-serif}
+  .cargando img{width:96px;height:96px;border-radius:22px}
+  iframe{position:fixed;top:0;left:0;width:100%;height:100%;border:0;background:transparent;
+    padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+</style>
+</head>
+<body>
+<div class="cargando"><img src="icon-192.png" alt=""><span>Abriendo Pedidos GA…</span></div>
+<iframe src="https://script.google.com/macros/s/AKfycbzeBhe1STZt9k7w1h55bQHnY0lFcIp_DYCFIwzn8Ppe5697zTew-Cg6bHcL6J9Riw8r6A/exec" title="Toma de Pedidos Andino" allow="clipboard-write"></iframe>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); });
+  }
+</script>
+</body>
+</html>
